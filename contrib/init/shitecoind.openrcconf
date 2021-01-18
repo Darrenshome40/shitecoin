@@ -1,0 +1,33 @@
+# /etc/conf.d/shitecoind: config file for /etc/init.d/shitecoind
+
+# Config file location
+#shitecoinD_CONFIGFILE="/etc/shitecoin/shitecoin.conf"
+
+# What directory to write pidfile to?  (created and owned by $shitecoinD_USER)
+#shitecoinD_PIDDIR="/var/run/shitecoind"
+
+# What filename to give the pidfile
+#shitecoinD_PIDFILE="${shitecoinD_PIDDIR}/shitecoind.pid"
+
+# Where to write shitecoind data (be mindful that the blockchain is large)
+#shitecoinD_DATADIR="/var/lib/shitecoind"
+
+# User and group to own shitecoind process
+#shitecoinD_USER="shitecoin"
+#shitecoinD_GROUP="shitecoin"
+
+# Path to shitecoind executable
+#shitecoinD_BIN="/usr/bin/shitecoind"
+
+# Nice value to run shitecoind under
+#shitecoinD_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+#shitecoinD_OPTS=""
+
+# The timeout in seconds OpenRC will wait for shitecoind to terminate
+# after a SIGTERM has been raised.
+# Note that this will be mapped as argument to start-stop-daemon's
+# '--retry' option, which means you can specify a retry schedule
+# here. For more information see man 8 start-stop-daemon.
+shitecoinD_SIGTERM_TIMEOUT=600
